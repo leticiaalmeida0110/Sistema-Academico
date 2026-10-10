@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cursos</title>
+</head>
+<body>
+    <h1>Lista de Cursos</h1>
+
+    {% for item in dados %}
+        <p>
+            Curso: {{ item.nome }} |
+            Carga horária: {{ item.carga_horaria_total }} |
+            Duração: {{ item.duracao_meses }} meses
+        </p>
+    {% empty %}
+        <p>Nenhum curso cadastrado.</p>
+    {% endfor %}
+
+    <a href="/">Voltar ao início</a>
+</body>
+</html>

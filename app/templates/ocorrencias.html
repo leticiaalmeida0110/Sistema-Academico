@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Ocorrências</title>
+</head>
+<body>
+    <h1>Lista de Ocorrências</h1>
+
+    {% for item in dados %}
+        <p>
+            Descrição: {{ item.descricao }} |
+            Data: {{ item.data|date:"d/m/Y" }} |
+            Curso: {{ item.curso }} |
+            Disciplina: {{ item.disciplina }} |
+            Pessoa: {{ item.pessoa }}
+        </p>
+    {% empty %}
+        <p>Nenhuma ocorrência cadastrada.</p>
+    {% endfor %}
+
+    <a href="/">Voltar ao início</a>
+</body>
+</html>

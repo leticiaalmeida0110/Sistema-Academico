@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Ocupações</title>
+</head>
+<body>
+    <h1>Lista de Ocupações</h1>
+
+    {% for item in dados %}
+        <p>{{ item.nome }}</p>
+    {% empty %}
+        <p>Nenhuma ocupação cadastrada.</p>
+    {% endfor %}
+
+    <a href="/">Voltar ao início</a>
+</body>
+</html>

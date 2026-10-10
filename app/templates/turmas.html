@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Turmas</title>
+</head>
+<body>
+    <h1>Lista de Turmas</h1>
+
+    {% for item in dados %}
+        <p>
+            Turma: {{ item.nome }} |
+            Turno: {{ item.turno }}
+        </p>
+    {% empty %}
+        <p>Nenhuma turma cadastrada.</p>
+    {% endfor %}
+
+    <a href="/">Voltar ao início</a>
+</body>
+</html>

@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Instituições</title>
+</head>
+<body>
+    <h1>Lista de Instituições</h1>
+
+    {% for item in dados %}
+        <p>
+            Nome: {{ item.nome }} |
+            Site: {{ item.site }} |
+            Email: {{ item.email }} |
+            Telefone: {{ item.telefone }}
+        </p>
+    {% empty %}
+        <p>Nenhuma instituição cadastrada.</p>
+    {% endfor %}
+
+    <a href="/">Voltar ao início</a>
+</body>
+</html>

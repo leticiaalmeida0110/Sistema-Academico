@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Disciplinas</title>
+</head>
+<body>
+    <h1>Lista de Disciplinas</h1>
+
+    {% for item in dados %}
+        <p>
+            Disciplina: {{ item.nome }} |
+            Área: {{ item.area }}
+        </p>
+    {% empty %}
+        <p>Nenhuma disciplina cadastrada.</p>
+    {% endfor %}
+
+    <a href="/">Voltar ao início</a>
+</body>
+</html>

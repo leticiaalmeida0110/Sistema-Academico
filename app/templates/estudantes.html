@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Estudantes</title>
+</head>
+<body>
+    <h1>Lista de Estudantes</h1>
+
+    {% for item in dados %}
+        <p>
+            Nome: {{ item.nome }} |
+            Matrícula: {{ item.matricula }} |
+            Email: {{ item.email }}
+        </p>
+    {% empty %}
+        <p>Nenhum estudante cadastrado.</p>
+    {% endfor %}
+
+    <a href="/">Voltar ao início</a>
+</body>
+</html>

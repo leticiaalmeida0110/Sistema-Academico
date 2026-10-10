@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Frequências</title>
+</head>
+<body>
+    <h1>Lista de Frequências</h1>
+
+    {% for item in dados %}
+        <p>
+            Pessoa: {{ item.pessoa }} |
+            Estudante: {{ item.estudante|default:"Não informado" }} |
+            Curso: {{ item.curso }} |
+            Disciplina: {{ item.disciplina }} |
+            Número de faltas: {{ item.numero_faltas }}
+        </p>
+    {% empty %}
+        <p>Nenhuma frequência cadastrada.</p>
+    {% endfor %}
+
+    <a href="/">Voltar ao início</a>
+</body>
+</html>

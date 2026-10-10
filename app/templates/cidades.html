@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cidades</title>
+</head>
+<body>
+    <h1>Lista de Cidades</h1>
+
+    {% for item in dados %}
+        <p>
+            Cidade: {{ item.nome }} |
+            Estado: {{ item.uf }}
+        </p>
+    {% empty %}
+        <p>Nenhuma cidade cadastrada.</p>
+    {% endfor %}
+
+    <a href="/">Voltar ao início</a>
+</body>
+</html>

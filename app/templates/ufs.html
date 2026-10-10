@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Estados</title>
+</head>
+<body>
+    <h1>Lista de Estados</h1>
+
+    {% for item in dados %}
+        <p>
+            Estado: {{ item.nome }} |
+            Sigla: {{ item.sigla }}
+        </p>
+    {% empty %}
+        <p>Nenhum estado cadastrado.</p>
+    {% endfor %}
+
+    <a href="/">Voltar ao início</a>
+</body>
+</html>

@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Avaliações</title>
+</head>
+<body>
+    <h1>Lista de Avaliações</h1>
+
+    {% for item in dados %}
+        <p>
+            Descrição: {{ item.descricao }} |
+            Nota: {{ item.nota }} |
+            Curso: {{ item.curso }} |
+            Disciplina: {{ item.disciplina }} |
+            Tipo: {{ item.tipo_avaliacao }}
+        </p>
+    {% empty %}
+        <p>Nenhuma avaliação cadastrada.</p>
+    {% endfor %}
+
+    <a href="/">Voltar ao início</a>
+</body>
+</html>

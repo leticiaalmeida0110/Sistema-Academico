@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Matrículas</title>
+</head>
+<body>
+    <h1>Lista de Matrículas</h1>
+
+    {% for item in dados %}
+        <p>
+            Pessoa: {{ item.pessoa }} |
+            Curso: {{ item.curso }} |
+            Instituição: {{ item.instituicao }} |
+            Início: {{ item.data_inicio|date:"d/m/Y" }} |
+            Previsão de término: {{ item.data_previsao_termino|date:"d/m/Y" }}
+        </p>
+    {% empty %}
+        <p>Nenhuma matrícula cadastrada.</p>
+    {% endfor %}
+
+    <a href="/">Voltar ao início</a>
+</body>
+</html>

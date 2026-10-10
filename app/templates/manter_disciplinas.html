@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Disciplinas por Curso</title>
+</head>
+<body>
+    <h1>Disciplinas por Curso</h1>
+
+    {% for item in dados %}
+        <p>
+            Curso: {{ item.curso }} |
+            Disciplina: {{ item.disciplina }} |
+            Carga horária: {{ item.carga_horaria }} |
+            Turno: {{ item.turno }}
+        </p>
+    {% empty %}
+        <p>Nenhuma disciplina vinculada a cursos.</p>
+    {% endfor %}
+
+    <a href="/">Voltar ao início</a>
+</body>
+</html>
